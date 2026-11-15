@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://diqn2v74b2ayl"
+path="res://.godot/imported/tap.wav-db3f0176dbe5ead83c79bc7d66f29b9d.sample"
+
+[deps]
+
+source_file="res://slimeSprites/Slime Frame Jump/brackeys_platformer_assets/sounds/tap.wav"
+dest_files=["res://.godot/imported/tap.wav-db3f0176dbe5ead83c79bc7d66f29b9d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

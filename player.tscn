@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://b7nwxwvb4i5m7"]
+
+[ext_resource type="Texture2D" uid="uid://cxm4b8cenbxvp" path="res://slimeSprites/Idle/slimeIdleFrame.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://cvrd1b70vn5j1" path="res://slimeSprites/landing lag/slimeLandingLagFrame1.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://c7duomk0yhc7s" path="res://slimeSprites/Slime Frame Jump/slimeJumpFrame0.png" id="2_urp6f"]
+[ext_resource type="Texture2D" uid="uid://8iec5mb3sx7k" path="res://slimeSprites/Slime Frame Jump/slimeJumpFrame1.png" id="3_bwjto"]
+[ext_resource type="Texture2D" uid="uid://dc5lsk63vqq45" path="res://slimeSprites/landing lag/slimeLandingLagFrame2.png" id="3_sweqy"]
+[ext_resource type="Texture2D" uid="uid://ceub71wquslt4" path="res://slimeSprites/landing lag/slimeLandingLagFrame3.png" id="4_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://b7b7jfnkuh8ra" path="res://slimeSprites/Slime Frame Jump/slimeJumpFrame2.png" id="4_606se"]
+[ext_resource type="Texture2D" uid="uid://c4tbiv2bixpwy" path="res://slimeSprites/Slime Frame Jump/slimeJumpFrame3.png" id="5_u1c27"]
+[ext_resource type="Texture2D" uid="uid://cujfnta2ftdub" path="res://slimeSprites/Slime Frame Jump/slimeJumpFrame4.png" id="6_op7ga"]
+[ext_resource type="Texture2D" uid="uid://bysw2xcvat4n6" path="res://slimeSprites/slimeFrame Walk/slimeFrameWalk0.png" id="10_q13i1"]
+[ext_resource type="Texture2D" uid="uid://b5wvt0mla7ak2" path="res://slimeSprites/slimeFrame Walk/slimeFrameWalk1.png" id="11_pylmc"]
+[ext_resource type="Texture2D" uid="uid://bcbyru5pc2xka" path="res://slimeSprites/slimeFrame Walk/slimeFrameWalk2.png" id="12_pbfsw"]
+[ext_resource type="Texture2D" uid="uid://ckl3dh0xulrul" path="res://slimeSprites/slimeFrame Walk/slimeFrameWalk4.png" id="13_5tmop"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oqx3b"]
+radius = 40.04997
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oqx3b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4flbx")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u1c27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_op7ga")
+}],
+"loop": 1,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hqtel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2hs0m")
+}],
+"loop": 0,
+"name": &"Landing lag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_q13i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pylmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pbfsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5tmop")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=232533136]
+
+[node name="SlimeIdleFrame" type="Sprite2D" parent="." unique_id=1880806557]
+texture_filter = 1
+position = Vector2(1, -17)
+scale = Vector2(3.205, 3.205)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1314493521]
+visible = false
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_oqx3b")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=560068793]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1821071631]
+visible = false
+position = Vector2(0, 3)
+scale = Vector2(1, -0.67999876)
+shape = SubResource("CircleShape2D_oqx3b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1031104000]
+texture_filter = 1
+position = Vector2(0.99999964, -17)
+scale = Vector2(3.205, 3.205)
+sprite_frames = SubResource("SpriteFrames_oqx3b")
+animation = &"Landing lag"
+frame = 2
+frame_progress = 0.20102346

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b7diibvlm0w3g"]
+
+[ext_resource type="Texture2D" uid="uid://7whopmgmkwwb" path="res://Inverted hourglass1.png" id="1_qdhxh"]
+
+[node name="timer" type="Control" unique_id=311662740]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 1.0
+offset_right = 40.0
+offset_bottom = 41.0
+
+[node name="Label" type="Label" parent="." unique_id=354868203]
+layout_mode = 0
+offset_left = 33.0
+offset_top = -11.0
+offset_right = 73.0
+offset_bottom = 12.0
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=848368854]
+position = Vector2(2.5, 0)
+texture = ExtResource("1_qdhxh")

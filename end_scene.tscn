@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cyyjvkhys85qs"]
+
+[ext_resource type="Texture2D" uid="uid://cx1rm3ih2lbup" path="res://Background3.jpeg" id="1_3wcc1"]
+[ext_resource type="Script" uid="uid://cxw1ewftssg2b" path="res://Fail scene.gd" id="1_jvrxn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvrxn"]
+bg_color = Color(0.5272052, 0.6985132, 0.88005906, 0.83137256)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vitp6"]
+bg_color = Color(0.5272052, 0.6985132, 0.88005906, 0.83137256)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="Fail End Scene" type="Node2D" unique_id=512943466]
+script = ExtResource("1_jvrxn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=531924113]
+offset_top = -28.0
+offset_right = 841.0
+offset_bottom = 812.0
+scale = Vector2(1.3734771, 1.3488266)
+texture = ExtResource("1_3wcc1")
+
+[node name="End note" type="RichTextLabel" parent="." unique_id=286215210]
+offset_left = 262.0
+offset_top = 111.0
+offset_right = 940.0
+offset_bottom = 400.0
+theme_override_font_sizes/normal_font_size = 100
+text = "You fell. 
+Get back up?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1356715985]
+custom_minimum_size = Vector2(5, 5)
+propagate_maximum_size = false
+offset_left = 354.0
+offset_top = 464.0
+offset_right = 848.0
+offset_bottom = 533.0
+theme_override_constants/separation = 100
+
+[node name="YES" type="Button" parent="HBoxContainer" unique_id=598232692]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4509804, 0.8666667, 0.92941177, 1)
+theme_override_colors/font_outline_color = Color(0.20392157, 0.43529412, 0.42352942, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_jvrxn")
+text = "YES!"
+
+[node name="NOT RN" type="Button" parent="HBoxContainer" unique_id=2102510881]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45031422, 0.86783063, 0.9280593, 1)
+theme_override_colors/font_outline_color = Color(0.20413464, 0.43424657, 0.4217627, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_vitp6")
+text = "Next time :)"

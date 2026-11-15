@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bcf0l7y3ro6s5"]
+
+[ext_resource type="Script" uid="uid://dx3yi60ohges2" path="res://new_script.gd" id="1_ak2if"]
+[ext_resource type="Texture2D" uid="uid://crunjwrpnrosp" path="res://Background.jpeg" id="1_v6p8y"]
+[ext_resource type="FontFile" uid="uid://dteap0xuly72q" path="res://PixelOperator8-Bold.ttf" id="3_ig5kc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05l2w"]
+bg_color = Color(0.5272052, 0.6985132, 0.88005906, 0.83137256)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig5kc"]
+bg_color = Color(0.5272052, 0.6985132, 0.88005906, 0.83137256)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="Title screen" type="Node2D" unique_id=307390889]
+script = ExtResource("1_ak2if")
+
+[node name="Background" type="TextureRect" parent="." unique_id=811237164]
+offset_left = -20.0
+offset_top = -209.0
+offset_right = 1173.0
+offset_bottom = 736.0
+texture = ExtResource("1_v6p8y")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1937030385]
+offset_left = 58.0
+offset_top = 57.0
+offset_right = 1059.0
+offset_bottom = 153.0
+theme_override_colors/font_outline_color = Color(0.2, 0.5058824, 0.9764706, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("3_ig5kc")
+theme_override_font_sizes/normal_font_size = 75
+text = "Rebound: 
+"
+
+[node name="Title2" type="RichTextLabel" parent="." unique_id=40564746]
+offset_left = 58.0
+offset_top = 168.0
+offset_right = 1059.0
+offset_bottom = 369.0
+theme_override_colors/font_outline_color = Color(0.2, 0.5058824, 0.9764706, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("3_ig5kc")
+theme_override_font_sizes/normal_font_size = 90
+text = "Slime of 
+IMMORTALITY"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=230853342]
+offset_left = 137.0
+offset_top = 427.0
+offset_right = 418.0
+offset_bottom = 591.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1125704855]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4509804, 0.8666667, 0.92941177, 1)
+theme_override_colors/font_outline_color = Color(0.20392157, 0.43529412, 0.42352942, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_05l2w")
+text = "Start"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1915241954]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45031422, 0.86783063, 0.9280593, 1)
+theme_override_colors/font_outline_color = Color(0.20413464, 0.43424657, 0.4217627, 1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ig5kc")
+text = "Settings"
